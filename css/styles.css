@@ -366,14 +366,11 @@ background-image:
     display: none;
   }
 
-  .social-list.list.mobile {
-    display: flex;
-    width: 328px;
-    column-gap: 56px;
-  }
-
   .menu-container {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
     top: 0;
     left: 0;
     width: 100vw;
@@ -424,6 +421,12 @@ background-image:
     background-color: var(--button-bg-accent-color);
     cursor: pointer;
   }  
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+  }
   
   .mobile-nav .item .link{
     display: inline-block;
@@ -437,9 +440,9 @@ background-image:
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .mobile-nav .item .tel {
+  .mobile-contacts .item .tel {
     display: inline-block;
-    margin-top: 150px;
+    margin-bottom: 40px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 30px;
@@ -449,17 +452,22 @@ background-image:
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
  
-  .mobile-nav .item .mailto {
+  .mobile-contacts .item .mailto {
     display: inline-block;
-    color: var(--title-text-color);
-    margin-top: 40px;
     margin-bottom: 48px;
+    color: var(--title-text-color);
     font-weight: 700;
     font-size: 30px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .social-list.list.mobile {
+    display: flex;
+    width: 328px;
+    column-gap: 56px;
   }
 
   .mobile-nav .item .link:hover,
